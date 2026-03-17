@@ -1,4 +1,5 @@
 import Counter from '@/components/Counter'
+import { submitMessage } from './actions'
 
 // RSC
 async function getTime() {
@@ -50,6 +51,12 @@ export default async function Home() {
 
       {/* Client Component のブロック */}
       <Counter />
+
+      {/* Server Action */}
+      <form action={submitMessage}>
+        <input name="message" type="text" placeholder="メッセージを入力" />
+        <button type="submit">送信</button>
+      </form>
     </main>
   )
 }
