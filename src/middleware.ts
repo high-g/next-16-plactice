@@ -2,7 +2,10 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
-  console.log('middleware が実行された：', request.url)
+  if (request.nextUrl.pathname === '/api/secret') {
+    return NextResponse.json({ message: 'このAPIはアクセスできません！' }, { status: 403 })
+  }
+
   return NextResponse.next()
 }
 
