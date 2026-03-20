@@ -12,9 +12,9 @@
 
 ## Phase 1: Next.js 残り基礎
 
-- [ ] Route Handlers (`app/api/route.ts`) — API エンドポイントの作り方
-- [ ] Middleware (`middleware.ts`) — 認証チェック・リダイレクト
-- [ ] 環境変数 (`.env`) — `NEXT_PUBLIC_` あり/なしの違い
+- [x] Route Handlers (`app/api/route.ts`) — API エンドポイントの作り方
+- [x] Middleware (`middleware.ts`) — 認証チェック・リダイレクト
+- [x] 環境変数 (`.env`) — `NEXT_PUBLIC_` あり/なしの違い
 
 ---
 
