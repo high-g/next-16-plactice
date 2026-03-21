@@ -28,8 +28,9 @@
 
 ## Phase 2: Hono
 
-- [ ] Hono の基本 — ルーティング、ハンドラー
-- [ ] Next.js の Route Handlers と比較
+- [x] Hono の基本 — ルーティング、ハンドラー
+- [x] Next.js の Route Handlers と比較
+- [x] Hono + Next.js の連携 — RSC から GET、Server Actions から POST
 - [ ] Hono + Next.js の組み合わせ (RPC モード)
 - [ ] バリデーション (Zod)
 
