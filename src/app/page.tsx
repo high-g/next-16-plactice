@@ -53,7 +53,7 @@ export default async function Home() {
 
   return (
     <main>
-      {/*　Server Component のブロック */}
+      {/* Server Component のブロック */}
       <section>
         <p>{body}</p>
       </section>
