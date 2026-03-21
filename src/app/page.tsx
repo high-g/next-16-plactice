@@ -27,6 +27,12 @@ async function getPostISR() {
   return res.json()
 }
 
+async function getPostsFromHono() {
+  const res = await fetch('http://localhost:3001/posts', { cache: 'no-store' })
+  console.log('Honoからのレスポンス:', res)
+  return res.json()
+}
+
 export default async function Home() {
   // RSC
   // const res = await getTime()
@@ -39,6 +45,9 @@ export default async function Home() {
 
   // ISR
   const res = await getPostISR()
+
+  // Honoからデータ取得
+  const posts = await getPostsFromHono()
 
   const body = res.body
 
@@ -57,6 +66,14 @@ export default async function Home() {
         <input name="message" type="text" placeholder="メッセージを入力" />
         <button type="submit">送信</button>
       </form>
+
+      <hr />
+
+      <ul>
+        {posts.map((post: { id: number; title: string }) => (
+          <li key={post.id}>{post.title}</li>
+        ))}
+      </ul>
     </main>
   )
 }
