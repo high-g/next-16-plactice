@@ -3,5 +3,13 @@
 export async function submitMessage(formData: FormData) {
   const message = formData.get('message') as string
   console.log('サーバで受け取ったメッセージ：', message)
-  // ここでDBに保存したりできる
+
+  const res = await fetch('http://localhost:30001/posts', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ title: message }),
+  })
+
+  const data = await res.json()
+  console.log('Honoからのレスポンス:', data)
 }
