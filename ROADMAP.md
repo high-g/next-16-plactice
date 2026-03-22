@@ -31,8 +31,10 @@
 - [x] Hono の基本 — ルーティング、ハンドラー
 - [x] Next.js の Route Handlers と比較
 - [x] Hono + Next.js の連携 — RSC から GET、Server Actions から POST
-- [ ] Hono + Next.js の組み合わせ (RPC モード)
-- [ ] バリデーション (Zod)
+- [x] Hono + Next.js の組み合わせ (RPC モード)
+- [x] バリデーション (Zod)
+- [ ] DB 連携 (Prisma) — CRUD 実装
+- [ ] DB 連携 (Drizzle) — Prisma と比較しながら CRUD 実装
 
 ---
 
