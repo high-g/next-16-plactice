@@ -1,6 +1,14 @@
 import Counter from '@/components/Counter'
 import { submitMessage } from './actions'
 
+import { client } from '@/lib/client'
+
+// Hono RPC
+async function getPostsFromHonoRPC() {
+  const res = await client.posts.$get()
+  return res.json()
+}
+
 // RSC
 async function getTime() {
   return { body: new Date().toISOString() }
