@@ -55,7 +55,10 @@ export default async function Home() {
   const res = await getPostISR()
 
   // Honoからデータ取得
-  const posts = await getPostsFromHono()
+  //const posts = await getPostsFromHono()
+
+  // Hono RPC
+  const posts = await getPostsFromHonoRPC()
 
   const body = res.body
 
