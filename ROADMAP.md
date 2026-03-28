@@ -38,8 +38,12 @@
 
 ## Phase 2.5: DB 連携 (Prisma)
 
-- [ ] Prisma セットアップ — スキーマ定義・マイグレーション
-- [ ] Hono + Prisma で CRUD 実装 (GET / POST / PUT / DELETE)
+- [x] Prisma セットアップ — スキーマ定義・マイグレーション (User / Post、better-sqlite3)
+- [x] GET /posts — `prisma.post.findMany()` で DB から取得
+- [ ] POST /posts — DB への保存 (現状はハードコード)
+- [ ] GET /posts/:id — DB から1件取得 (現状はハードコード)
+- [ ] PUT /posts/:id — DB 更新
+- [ ] DELETE /posts/:id — DB 削除
 - [ ] Server Actions + Prisma での DB 操作
 - [ ] エラーハンドリング・型安全な操作
 
