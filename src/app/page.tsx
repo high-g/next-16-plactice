@@ -5,7 +5,7 @@ import { client } from '@/lib/client'
 
 // Hono RPC
 async function getPostsFromHonoRPC() {
-  const res = await client.posts.$get()
+  const res = await client.posts.$get({}, { init: { cache: 'no-store' } })
   return res.json()
 }
 
@@ -80,11 +80,16 @@ export default async function Home() {
 
       <hr />
 
-      <ul>
-        {posts.map((post: { id: number; title: string }) => (
-          <li key={post.id}>{post.title}</li>
-        ))}
-      </ul>
+      <table>
+        <tbody>
+          {posts.map((post: { id: number; title: string }) => (
+            <tr key={post.id}>
+              <td>{post.id}</td>
+              <td>{post.title}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </main>
   )
 }
