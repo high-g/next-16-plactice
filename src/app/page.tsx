@@ -3,12 +3,6 @@ import { submitMessage } from './actions'
 
 import { client } from '@/lib/client'
 
-// Hono RPC
-async function getPostsFromHonoRPC() {
-  const res = await client.posts.$get({}, { init: { cache: 'no-store' } })
-  return res.json()
-}
-
 // RSC
 async function getTime() {
   return { body: new Date().toISOString() }
@@ -32,6 +26,12 @@ async function getPostSSG() {
 async function getPostISR() {
   // 60秒ごとに再取得
   const res = await fetch('http://jsonplaceholder.typicode.com/posts/1', { next: { revalidate: 60 } })
+  return res.json()
+}
+
+// Hono RPC
+async function getPostsFromHonoRPC() {
+  const res = await client.posts.$get({}, { init: { cache: 'no-store' } })
   return res.json()
 }
 
