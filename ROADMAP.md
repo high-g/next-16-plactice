@@ -33,8 +33,24 @@
 - [x] Hono + Next.js の連携 — RSC から GET、Server Actions から POST
 - [x] Hono + Next.js の組み合わせ (RPC モード)
 - [x] バリデーション (Zod)
-- [ ] DB 連携 (Prisma) — CRUD 実装
-- [ ] DB 連携 (Drizzle) — Prisma と比較しながら CRUD 実装
+
+---
+
+## Phase 2.5: DB 連携 (Prisma)
+
+- [ ] Prisma セットアップ — スキーマ定義・マイグレーション
+- [ ] Hono + Prisma で CRUD 実装 (GET / POST / PUT / DELETE)
+- [ ] Server Actions + Prisma での DB 操作
+- [ ] エラーハンドリング・型安全な操作
+
+---
+
+## Phase 2.6: DB 連携 (Drizzle)
+
+- [ ] Drizzle セットアップ — スキーマ定義・マイグレーション
+- [ ] Hono + Drizzle で CRUD 実装
+- [ ] Prisma との比較 — DX・型安全性・パフォーマンス観点
+- [ ] どちらを使うか判断基準の整理
 
 ---
 
