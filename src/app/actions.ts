@@ -7,7 +7,7 @@ export async function submitMessage(formData: FormData) {
   const res = await fetch('http://localhost:3001/posts', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ title: message }),
+    body: JSON.stringify({ authorId: 1, title: message }), // authorId は一旦仮
   })
 
   const data = await res.json()
