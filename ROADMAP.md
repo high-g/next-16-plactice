@@ -1,17 +1,12 @@
 # 学習ロードマップ: Next.js 16 + Hono + Docker + AWS
 
-## 現在地 ✅
+## Phase 1: Next.js 残り基礎
 
 - [x] Next.js 16 環境構築 (pnpm + Vercel デプロイ)
 - [x] RSC (React Server Components)
 - [x] Client Component (`"use client"`)
 - [x] SSR / SSG / ISR (`fetch` の `cache` オプション)
 - [x] Server Actions (`"use server"`)
-
----
-
-## Phase 1: Next.js 残り基礎
-
 - [x] Route Handlers (`app/api/route.ts`) — API エンドポイントの作り方
 - [x] Middleware (`middleware.ts`) — 認証チェック・リダイレクト
 - [x] 環境変数 (`.env`) — `NEXT_PUBLIC_` あり/なしの違い
