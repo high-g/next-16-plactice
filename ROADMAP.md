@@ -40,12 +40,12 @@
 
 - [x] Prisma セットアップ — スキーマ定義・マイグレーション (User / Post、better-sqlite3)
 - [x] GET /posts — `prisma.post.findMany()` で DB から取得
-- [ ] POST /posts — DB への保存 (現状はハードコード)
-- [ ] GET /posts/:id — DB から1件取得 (現状はハードコード)
-- [ ] PUT /posts/:id — DB 更新
-- [ ] DELETE /posts/:id — DB 削除
+- [x] POST /posts — DB への保存
+- [x] GET /posts/:id — DB から1件取得
+- [x] PUT /posts/:id — DB 更新
+- [x] DELETE /posts/:id — DB 削除
 - [ ] Server Actions + Prisma での DB 操作
-- [ ] エラーハンドリング・型安全な操作
+- [x] エラーハンドリング・型安全な操作
 
 ---
 
