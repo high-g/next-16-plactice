@@ -44,7 +44,6 @@
 - [x] GET /posts/:id — DB から1件取得
 - [x] PUT /posts/:id — DB 更新
 - [x] DELETE /posts/:id — DB 削除
-- [ ] Server Actions + Prisma での DB 操作
 - [x] エラーハンドリング・型安全な操作
 
 ---
