@@ -1,6 +1,6 @@
 # 学習ロードマップ: Next.js 16 + Hono + Docker + AWS
 
-## Phase 1: Next.js 残り基礎
+## Phase 1: Next.js
 
 - [x] Next.js 16 環境構築 (pnpm + Vercel デプロイ)
 - [x] RSC (React Server Components)
