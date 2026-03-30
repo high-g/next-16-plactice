@@ -41,7 +41,7 @@
 - [x] Hono + Drizzle で CRUD 実装
 - [x] Prisma との比較 — DX・型安全性・パフォーマンス観点
 - [x] どちらを使うか判断基準の整理
-- [ ] Next.js の page.tsx から Prisma・Drizzle 両エンドポイントを呼び出す
+- [x] Next.js の page.tsx から Prisma・Drizzle 両エンドポイントを呼び出す
 
 ---
 
