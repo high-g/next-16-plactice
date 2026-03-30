@@ -1,5 +1,7 @@
 'use server'
 
+import { revalidatePath } from 'next/cache'
+
 export async function prismaSubmitMessage(formData: FormData) {
   const message = formData.get('message') as string
   console.log('サーバで受け取ったメッセージ：', message)
@@ -11,6 +13,7 @@ export async function prismaSubmitMessage(formData: FormData) {
   })
 
   const data = await res.json()
+  revalidatePath('/')
   console.log('Honoからのレスポンス:', data)
 }
 
@@ -25,5 +28,6 @@ export async function drizzleSubmitMessage(formData: FormData) {
   })
 
   const data = await res.json()
+  revalidatePath('/')
   console.log('Honoからのレスポンス:', data)
 }
