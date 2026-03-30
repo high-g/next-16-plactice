@@ -8,7 +8,12 @@ export default function Counter() {
   return (
     <div>
       <p>{count}</p>
-      <button onClick={() => setCount((c) => c + 1)}>カウントアップ</button>
+      <button
+        onClick={() => setCount((c) => c + 1)}
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold p-0.5 rounded cursor-pointer"
+      >
+        カウントアップ
+      </button>
 
       {/* 環境変数の使用例 */}
       {/* <p>{process.env.SECRET_KEY || ''}</p> */}

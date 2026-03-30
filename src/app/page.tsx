@@ -1,5 +1,5 @@
 import Counter from '@/components/Counter'
-import { submitMessage } from './actions'
+import { prismaSubmitMessage, drizzleSubmitMessage } from './actions'
 import { client } from '@/lib/client'
 
 // Prisma 経由
@@ -22,14 +22,21 @@ export default async function Home() {
     <main>
       <Counter />
 
-      <form action={submitMessage}>
-        <input name="message" type="text" placeholder="メッセージを入力" />
-        <button type="submit">送信</button>
+      <hr className="my-4" />
+
+      <h2 className="text-xl font-bold mb-4">Prisma Posts</h2>
+      <form action={prismaSubmitMessage} className="flex gap-2">
+        <input
+          name="message"
+          type="text"
+          placeholder="Prisma経由でDBに登録する内容を入力"
+          className="border border-gray-300 rounded p-1"
+        />
+        <button type="submit" className="bg-gray-500 hover:bg-gray-700 text-white font-bold px-2 rounded">
+          送信
+        </button>
       </form>
 
-      <hr />
-
-      <h2>Prisma Posts</h2>
       <table>
         <tbody>
           {prismaPosts.map((post: { id: number; title: string }) => (
@@ -41,9 +48,20 @@ export default async function Home() {
         </tbody>
       </table>
 
-      <hr />
+      <hr className="my-4" />
 
-      <h2>Drizzle Posts</h2>
+      <h2 className="text-xl font-bold mb-4">Drizzle Posts</h2>
+      <form action={drizzleSubmitMessage} className="flex gap-2">
+        <input
+          name="message"
+          type="text"
+          placeholder="Drizzle経由でDBに登録する内容を入力"
+          className="border border-gray-300 rounded p-1"
+        />
+        <button type="submit" className="bg-gray-500 hover:bg-gray-700 text-white font-bold px-2 rounded">
+          送信
+        </button>
+      </form>
       <table>
         <tbody>
           {drizzlePosts.map((post: { id: number; title: string }) => (
