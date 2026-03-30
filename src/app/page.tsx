@@ -20,6 +20,7 @@ export default async function Home() {
 
   return (
     <main>
+      <h1 className="text-2xl font-bold mb-4">{process.env.NEXT_PUBLIC_APP_NAME || ''}</h1>
       <Counter />
 
       <hr className="my-4" />
