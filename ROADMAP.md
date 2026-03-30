@@ -41,6 +41,7 @@
 - [x] Hono + Drizzle で CRUD 実装
 - [x] Prisma との比較 — DX・型安全性・パフォーマンス観点
 - [x] どちらを使うか判断基準の整理
+- [ ] Next.js の page.tsx から Prisma・Drizzle 両エンドポイントを呼び出す
 
 ---
 
@@ -58,6 +59,13 @@
 - [ ] ECR に Docker イメージを push
 - [ ] ECS (Fargate) でコンテナをデプロイ
 - [ ] 独自ドメイン + HTTPS (Route 53 + ACM)
+
+---
+
+## 追加学習: その他 ORM
+
+- [ ] Kysely を試す — SQL に近いクエリビルダーの書き心地を体験
+- [ ] MikroORM を試す — フル機能 ORM との比較
 
 ---
 
