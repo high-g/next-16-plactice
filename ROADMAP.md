@@ -47,8 +47,9 @@
 
 ## Phase 3: Docker
 
-- [ ] Docker の基本概念を理解
-- [ ] Next.js アプリを Docker 化
+- [x] Docker の基本概念を理解
+- [x] Hono アプリを Docker 化
+- [ ] Next.js アプリを Docker 化（multi-stage build）
 - [ ] Dockerfile の書き方 (multi-stage build)
 - [ ] docker-compose でローカル開発環境を構築
 - [ ] DevContainer を使った開発環境構築
